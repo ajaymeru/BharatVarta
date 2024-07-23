@@ -1,0 +1,96 @@
+    /* src/Component/Navbar/Navbar.css */
+
+    .navbar {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        background-color: #5674c2;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        width: 150px;
+        border-radius: 20px 10px 10px 20px;
+        padding-left: 10px;
+    }
+
+    .navlinks {
+        padding-right: 5%;
+    }
+
+    .navlinks ul {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .navlinks li {
+        list-style: none;
+    }
+
+    .navlinks a {
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .hamburger .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin-top: 4px;
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 500px) {
+        .navlinks {
+            position: absolute;
+            top: 10vh;
+            right: 0;
+            width: 100%;
+            background-color: #5674c2;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .navlinks.open {
+            max-height: 90vh;
+            opacity: 1;
+        }
+
+        .navlinks ul {
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .hamburger.open .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }

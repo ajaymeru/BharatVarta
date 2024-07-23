@@ -1,0 +1,59 @@
+/* src/Component/Technology/Technology.css */
+
+.technology {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.technology h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #5674c2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card h2 {
+    font-size: 20px;
+}
+
+.card p {
+    color: #555;
+}
+
+.card a {
+    color: #5674c2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
